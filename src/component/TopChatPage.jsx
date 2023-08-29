@@ -7,7 +7,6 @@ import { ChatState } from '../context/ChatProvider'
 
 function TopChatPage({showProfile,setShowProfile}) {
   const{setIsSearch}=ChatState()
-
  return (
     <div className='bg-white p-2 flex flex-row mb-2 justify-around'>
       <div className="w-full"
