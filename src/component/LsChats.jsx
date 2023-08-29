@@ -62,7 +62,6 @@ const {setSelectedChat} =ChatState();
     }
  }
   return (
-
     <div className="bg-slate-200 h-full m-1 rounded-lg w-1/3 overflow-y-scroll scroll-smooth  scrollbar scrollbar-thumb-2px">
           <div className="flex flex-col justify-center items-center text-2xl w-full ">
             <h1 className="m-2 font-bold"> PenChat </h1>
