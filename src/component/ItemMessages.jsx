@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { ChatState } from '../context/ChatProvider'
 import axios from 'axios';
-
+import { recieveMessageRoute } from '../Utils/Routes';
 
 function ItemMessages({socket,messages,setMessages}) {
 const {user} =ChatState();
@@ -15,7 +15,7 @@ const {selectedChat}=ChatState();
   },
 };
      try{
-      const res =await axios.get(`http://localhost:3000/api/message/${selectedChat._id}`,config) ;
+      const res =await axios.get(`${recieveMessageRoute}/${selectedChat._id}`,config) ;
          ;
         if(res.data){
          setMessages(res.data) ;

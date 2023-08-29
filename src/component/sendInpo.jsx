@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import icSend from "../assets/send.svg"
 import { ChatState } from '../context/ChatProvider';
 import axios from "axios"
-
+import { sendMessageRoute } from '../Utils/Routes';
 
 function sendInpo({socket,messages,setMessages}) {
  const[content,setContent]=useState("");
@@ -15,7 +15,7 @@ function sendInpo({socket,messages,setMessages}) {
   },
 };
       try{
-          const res =await axios.post("http://localhost:3000/api/message",{
+          const res =await axios.post(sendMessageRoute,{
                content,chatId:selectedChat._id
           },config);
 

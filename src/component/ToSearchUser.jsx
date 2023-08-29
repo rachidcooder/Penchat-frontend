@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { ChatState } from '../context/ChatProvider'
 import axios from 'axios';
+import { AccessChatRoute, allUsersRoute } from '../Utils/Routes';
+
 
 function ToSearchUser() {
   const{user} =ChatState();
@@ -15,7 +17,7 @@ function ToSearchUser() {
  useEffect(()=>{
 
     const getUsers= async()=>{
-      const res =await axios.get(`http://localhost:3000/api/user/users`,config);  
+      const res =await axios.get(allUsersRoute,config);  
       if(res.data){
         setUsers(res.data) ;
   
@@ -31,7 +33,7 @@ const onClose=()=>{
 const onAccesTochat=async(userId)=>{
   try{
   
-    const res =await axios.post("http://localhost:3000/api/chat",{userId},config) ;
+    const res =await axios.post(AccessChatRoute,{userId},config) ;
     if(res.data) {
       setIsSearch(false) ;
             setChats( [...chats,res.data]) ;

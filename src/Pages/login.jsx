@@ -5,6 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import axios from 'axios';
 import { useNavigate,Link } from 'react-router-dom';
 import { ChatState } from '../context/ChatProvider';
+import { loginRoute } from '../Utils/Routes';
 
 function login() {
   const [email,setEmail]=useState("")
@@ -27,7 +28,7 @@ const {user ,setUser}=ChatState();
  toast.error("some fields are empty !",toastOptions)
       }else{
        try{
-           const res= await axios.post("http://localhost:3000/api/user/login",{email,password});
+           const res= await axios.post(loginRoute,{email,password});
             
      if(res.data.id){  
        localStorage.setItem("userInfo",JSON.stringify(res.data));

@@ -5,6 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import axios from "axios"
 import ChatState from "../context/ChatProvider"
 import { useNavigate,Link } from 'react-router-dom';
+import {registerRoute} from '../Utils/Routes'
 
 function Register() {
   const [name,setName]=useState("");
@@ -34,7 +35,7 @@ function Register() {
          toast.error("Password must be longer !",toastOptions)
          }else{
            try{
-              const res= await axios.post("http://localhost:3000/api/user",{
+              const res= await axios.post(registerRoute,{
                  name,email,password
              })
                console.log(res)
