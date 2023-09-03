@@ -2,7 +2,7 @@ import { ChatState } from "../context/ChatProvider"
 import icApp from "../assets/pen.svg"
 import { useEffect } from "react";
 import axios from "axios";
-import { fetchChats } from "../Utils/Routes";
+import { fetchChats,AccessChatRoute } from "../Utils/Routes";
 
 function LsChats() {
 const {user}=ChatState();
@@ -43,7 +43,7 @@ const {setSelectedChat} =ChatState();
 };
   
     try{
-         const res=await axios.post(`http://localhost:3000/api/chat/`,{
+         const res=await axios.post(AccessChatRoute,{
             userId:readId
          },config) ;
      const chatslect=res.data ;
