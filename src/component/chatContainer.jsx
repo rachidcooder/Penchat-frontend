@@ -58,7 +58,7 @@ function chatContainer() {
     <div>
   <div className='m-5 h-full flex items-center justify-center flex-col'>
      <h1 className="font-bold m-2 mt-5 text-4xl" > Welcom to ChatPen ! </h1> 
-      <h2 className="font-semibold m-2 text-2xl" >Select a Chat to start Talking with Friend</h2>
+      <h2 className="font-semibold m-2 text-2xl" >Select or Search for  Chat to start Talking with Friend</h2>
     </div>
     </div>
   )
