@@ -7,7 +7,7 @@ import { useEffect, useState } from "react"
 import io from 'socket.io-client'
 
 
-const ENDPOINT = "http://localhost:3000"; // "https://talk-a-tive.herokuapp.com"; -> After deployment
+const ENDPOINT = "https://panchat-api.onrender.com"; // "https://talk-a-tive.herokuapp.com"; -> After deployment
 var socket, selectedChatCompare;
 
 function chatContainer() {
