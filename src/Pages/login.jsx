@@ -71,7 +71,6 @@ const {user ,setUser}=ChatState();
                   onChange={(e)=>{setPassword(e.target.value)}}
                   />
              
-        
             <button type='submit'
               className='bg-cyan-400 rounded-lg  p-1 m-2 font-bold hover:bg-cyan-600'
               >Log in</button>

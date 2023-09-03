@@ -42,7 +42,7 @@ function Register() {
 
               if(res.data.id){
                localStorage.setItem("userInfo",JSON.stringify(res.data)) ;
-              // navigate("/chat") ;
+               navigate("/chat") ;
              }else{
               toast.error(res.data.msg,toastOptions);
              }
@@ -92,7 +92,7 @@ function Register() {
                   />
         
             <button type='submit'
-              className='bg-cyan-400 rounded-lg  p-1 m-2 font-bold hover:bg-cyan-400'
+              className='bg-cyan-400 rounded-lg  p-1 m-2 font-bold hover:bg-cyan-600'
               >Register</button>
                <div>
           <span>
